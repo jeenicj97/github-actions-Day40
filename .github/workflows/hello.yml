@@ -1,25 +1,12 @@
-name: Hello Workflow
+name: First workflow
 
 on: push
 
 jobs:
-  greet:
-    runs-on: ubuntu-latest
+  hello:
+    runs-on: ubnuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Say hello
-        run: echo "Hello from GitHub Actions"
-
-      - name: Print current date and time
-        run: date
-
-      - name: Print branch name
-        run: echo "Branch is ${{ github.ref_name }}"
-
-      - name: List files in repo
-        run: ls -la
-
-      - name: Print number OS
-        run: echo "Running on $RUNNER_OS"
+      - name: Print Hello
+        run: echo "Hello from GHA"
