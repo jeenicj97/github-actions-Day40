@@ -9,4 +9,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Print Hello
-        run: echo "Hello from GHA"
+        run: echo "Hello from GitHub Actions"
+      - name: Print current date & time
+        run date
+      - name: Print branch name
+        run: echo "Branch is ${{ github.ref_name }}"
+      - name: List files in repo
+        run: ls -la
+      - name: Print runner OS
+        run: echo "Running on $RUNNER_OS"
